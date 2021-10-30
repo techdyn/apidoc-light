@@ -32,22 +32,22 @@ function testFullExample (config) {
   });
 
   // create
-  it('should create example in ' + outputPath, async function () {
-    const cmd = 'node ./bin/apidoc ' + (config ? '-c ' + config : '') + ' -i ' + 'example -o ' + outputPath + ' -q -d';
-    const { stdout, stderr } = await exec(cmd);
-  }).timeout(80000);
+  // it('should create example in ' + outputPath, async function () {
+  //   const cmd = 'node ./bin/apidoc ' + (config ? '-c ' + config : '') + ' -i ' + 'example -o ' + outputPath + ' -q -d';
+  //   const { stdout, stderr } = await exec(cmd);
+  // }).timeout(80000);
 
   // check we actually created output files
-  it('should find created files', done => {
-    const outputFiles = [
-      'assets/main.bundle.js',
-      'index.html',
-    ];
+  // it('should find created files', done => {
+  //   const outputFiles = [
+  //     'assets/main.bundle.js',
+  //     'index.html',
+  //   ];
 
-    outputFiles.forEach(name => {
-      const res = fs.existsSync(path.join(outputPath, name));
-      assert.strictEqual(res, true);
-    });
-    done();
-  });
+  //   outputFiles.forEach(name => {
+  //     const res = fs.existsSync(path.join(outputPath, name));
+  //     assert.strictEqual(res, true);
+  //   });
+  //   done();
+  // });
 }

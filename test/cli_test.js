@@ -6,17 +6,17 @@ const pkgjson = require('../package.json');
 const assert = require('assert');
 
 describe('test cli options', function () {
-  it('should show correct version', function (done) {
-    const cmd = 'node ./bin/apidoc -V';
+  // it('should show correct version', function (done) {
+  //   const cmd = 'node ./bin/apidoc -V';
 
-    exec(cmd, function (err, stdout, stderr) {
-      if (err) { throw err; }
+  //   exec(cmd, function (err, stdout, stderr) {
+  //     if (err) { throw err; }
 
-      if (stderr) { throw stderr; }
-      assert.strictEqual(stdout.trim('\n'), pkgjson.version);
+  //     if (stderr) { throw stderr; }
+  //     assert.strictEqual(stdout.trim('\n'), pkgjson.version);
 
-      done();
-    });
-  });
+  //     done();
+  //   });
+  // });
 
 });

@@ -1,3 +1,85 @@
+# apidoc-light
+
+Fork of apiDoc with a way-lighter bundle optimized for programmatic usage.
+
+it's used in [apidoc-markdown](https://github.com/rigwild/apidoc-markdown).
+
+**Warning:** This is only meant to be used with programmatic usage. Documentation generation will not work!
+
+Features:
+
+* As minimal as possible code changes to easily keep in sync with new future apidoc updates
+* Removed unnecessary CLI
+* Removed unnecessary documentation templates
+* Removed unnecessary dependencies
+  - `bootstrap`
+  - `commander`
+  - `diff-match-patch`
+  - `expose-loader`
+  - `handlebars`
+  - `jquery`
+  - `nodemon`
+  - `path-to-regexp`
+  - `prismjs`
+  - `url-parse`
+  - `webpack`
+  - `webpack-cli`
+  - `style-loader`
+* Removed console log on `uncaughtException`
+* Removed file Writer
+* Outputs objects instead of JSON strings
+* Bubble up the errors to the lib consumer
+* `Silent` + `dryRun` options set to `true` by default
+* Minimal typings integrated directly
+* Removed tests relevant to documentation generation
+
+## Usage
+
+```sh
+pnpm install apidoc-light
+```
+
+```ts
+import { createDoc } from 'apidoc-light'
+
+const doc: Doc = createDoc({ src: input })
+
+// Output
+type Doc = {
+  project: Record<string, any> // apiDoc project object (`apidoc.json`)
+  data: Array<Record<string, any>>: // apiDoc documentation object (`api_data.json` file content)
+}
+```
+
+## License
+
+```
+MIT License
+
+Copyright (c) 2013-2021 inveris OHG
+Copyright (c) 2021 rigwild <me@rigwild.dev> (https://github.com/rigwild)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
 # apiDoc
 
 apiDoc creates a documentation from API descriptions in your source code.
