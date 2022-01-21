@@ -29,7 +29,8 @@ Features:
 * Removed file Writer
 * Outputs objects instead of JSON strings
 * Bubble up the errors to the lib consumer
-* `Silent` + `dryRun` options set to `true` by default
+* `dryRun` options set to `true` by default
+* Annoying `warn: Provided "src" option is not an array. Converting it to array.` now logged to debug log mode only
 * Minimal typings integrated directly
 * Removed tests relevant to documentation generation
 
