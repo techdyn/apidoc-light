@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16, 18]
-    name: Node ${{ matrix.node }} test
+    name: Node ${{ matrix.node-version }} test
     steps:
       - name: Checkout
         uses: actions/checkout@v3
