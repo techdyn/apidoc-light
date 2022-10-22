@@ -49,20 +49,20 @@
     "klaw-sync": "^6.0.0",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
-    "semver": "^7.3.7",
+    "semver": "^7.3.8",
     "winston": "^3.8.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.185",
-    "@types/mocha": "^9.1.1",
-    "@types/node": "^18.7.18",
-    "eslint": "^8.23.1",
+    "@types/lodash": "^4.14.186",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.11.3",
+    "eslint": "^8.26.0",
     "eslint-config-recommended": "^4.1.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.1",
-    "mocha": "^10.0.0"
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.1.0"
   }
 }
