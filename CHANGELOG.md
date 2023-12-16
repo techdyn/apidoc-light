@@ -1,5 +1,55 @@
 # apiDoc Changelog
 
+### 1.2.0
+
+* Allow generation of `api-data.json` file with an option flag (PR #1427 by Henrik Gemal)
+
+### 1.1.0
+
+* Upgrade dependencies
+
+### 1.0.3
+
+* Fix warning triggered by code example (fix #1384 via #1391 by Emmanuel Saracco)
+* Fix issue with apiSuccessExample parsiing (fix #1365 via #1366 by Emmanuel Saracco)
+
+### 1.0.2
+
+* Fix group name with parenthesis causing scrollspy error
+
+### 1.0.1
+
+* fix version number
+
+### 1.0.0
+
+#### BREAKING CHANGE
+
+* Requires Node v16 minimum (end of support for Node 14 is April 30th 2023)
+
+#### Bugfixes
+
+* Fix issue with non latin group names (fix #1331)
+* Fix bundle not being generated unless in debug mode (fix #1350)
+
+#### Contributed changes
+
+* Allow escaping fields with dot (fix #774, PR by Emmanuel Saracco #1063)
+* Add off-canvas sidenav for mobile (PR #1341 by @SchoppAx)
+* Improve filter performance for huge projects (fix #1337 via PR #1343 by @SchoppAx)
+* Add clipboard button to code snippets (PR #1342 by @SchoppAx)
+* Re-create eventlisteners after compare manipulation (PR #1340 by @SchoppAx)
+* Add prism highlight diff support (PR #1338 by @SchoppAx)
+
+### 0.54.0
+
+* Add cache busting system for assets with query parameter (PR #1333 by @Elysiome, fix #1332)
+* Let browser generate content-type for sending form-data (PR #1327 by @thenewvu, fix #1122, fix #1309, fix #1234)
+* Fix exclude filters option description: add note about always excluded files/folder
+* Improve assignment of conditional variable values (#1296 by MichalS)
+* Handle `@apiDefine` when producing warnings (PR #1305 by Lucas Cimon, fix #1305)
+* Update chinese translations (PR #1304 by Jony Young)
+
 ### 0.53.1
 
 * Add tsx to default extensions parsed. (fix #1290)
