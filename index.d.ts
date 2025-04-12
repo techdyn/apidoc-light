@@ -13,8 +13,17 @@ export interface ParsedFile {
 
 export interface MarkdownOptions {
   config: Record<string, any>;
-  rules: Record<string, (tokens: any[], idx: number) => string>;
-  plugins: any[];
+  rules?: Record<string, MarkdownRuleFunction> | undefined;
+  wrapper?: Record<string, MarkdownWrapperFunction> | undefined;
+  plugins?: any[] | undefined;
+}
+
+export interface MarkdownRuleFunction {
+  (tokens: any[], idx: number, options?: any, self?: any): string;
+}
+
+export interface MarkdownWrapperFunction {
+  (ruleFn: MarkdownRuleFunction, options?: any, self?: any): MarkdownRuleFunction;
 }
 
 export interface DocOptions {
