@@ -11,6 +11,12 @@ export interface ParsedFile {
   blocks: Array<{ global: any; local: any; }>;
 }
 
+export interface MarkdownOptions {
+  config: Record<string, any>;
+  rules: Record<string, (tokens: any[], idx: number) => string>;
+  plugins: any[];
+}
+
 export interface DocOptions {
   excludeFilters?: string[] | undefined;
   includeFilters?: string[] | undefined;
@@ -50,7 +56,7 @@ export interface DocOptions {
   silent?: boolean | undefined;
   dryRun?: boolean | undefined;
   simulate?: boolean | undefined;
-  markdown?: boolean | undefined;
+  markdown?: boolean | MarkdownOptions | undefined;
   lineEnding?: string | undefined;
   encoding?: string | undefined;
   copyDefinitions?: boolean | undefined;
