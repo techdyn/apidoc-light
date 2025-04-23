@@ -1,11 +1,11 @@
 {
   "name": "apidoc-light",
-  "version": "0.54.0",
+  "version": "0.54.1",
   "description": "RESTful web API Documentation Generator",
   "author": {
-    "name": "rigwild",
-    "email": "me@rigwild.dev",
-    "url": "https://rigwild.dev"
+    "name": "Brandon Stonebridge",
+    "email": "brandon@techster.co.uk",
+    "url": "https://techster.co.uk"
   },
   "license": "MIT",
   "main": "./lib/index.js",
