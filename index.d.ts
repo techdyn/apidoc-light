@@ -14,7 +14,8 @@ export interface ParsedFile {
 export interface MarkdownOptions {
   config: Record<string, any>;
   rules?: Record<string, MarkdownRuleFunction> | undefined;
-  wrapper?: Record<string, MarkdownWrapperFunction> | undefined;
+  resolvers?: Record<string, MarkdownWrapperFunction> | undefined;
+  wrappers?: Record<string, MarkdownWrapperFunction> | undefined;
   plugins?: any[] | undefined;
 }
 
